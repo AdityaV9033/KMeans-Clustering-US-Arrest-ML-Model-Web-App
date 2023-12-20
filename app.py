@@ -15,7 +15,7 @@ Drop_options = ["K Means Clustering"]
 Model_choice = st.sidebar.selectbox("Drop_options", options=Drop_options)
 
 Index = st.slider("Country Name", min_value=0, max_value=49, step=1)
-st.text(f"index value: {Index}")
+st.text(f"Country Name: {df.index[Index]}")
 Murder = st.slider("Murder", min_value=0.8, max_value=17.4, step=0.1)
 st.text(f"Muder value: {Murder}")
 Assault = st.slider("Assault", min_value=45, max_value=337, step=1)
@@ -25,8 +25,7 @@ st.text(f"UrbanPop value: {UrbanPop}")
 Rape = st.slider("Rape", min_value=7.3, max_value=46.0,step=0.1)
 st.text(f"Rape value: {Rape}")
 
-input={'index':Index,
-       'murder':Murder,
+input={'murder':Murder,
        'assault':Assault,
        'urbanpop':UrbanPop,
        'rape':Rape
