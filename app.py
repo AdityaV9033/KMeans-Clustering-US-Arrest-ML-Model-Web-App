@@ -37,6 +37,5 @@ input_X=pd.DataFrame(input, index=['value'])
 st.text("Input value of features:")
 input_X.T
 Z=input_X.iloc[:,1:]
-Z
 ypred=model.predict(Z)
 st.text(f"ClusterID of the country {Y.index[Index]} is: {ypred}")
