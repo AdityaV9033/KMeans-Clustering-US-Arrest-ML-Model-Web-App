@@ -2,15 +2,15 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 st.title('ClusterID of Countries for US Arrest Dataset')
-df = pd.read_csv('USArrests.csv')
+df = pd.read_csv('USArrests.csv',index_col=0)
 df.head()
-X = df.iloc[:,1:]
-X.head()
+#X = df.iloc[:,1:]
+#X.head()
 from sklearn.cluster import KMeans
 model = KMeans(n_clusters=3,random_state=2021)
-model.fit(X)
-Y = pd.read_csv('USArrests.csv',index_col=0)
-Y.head()
+model.fit(df)
+#Y = pd.read_csv('USArrests.csv',index_col=0)
+#Y.head()
 
 st.sidebar.header("Select the ML model you want to use")
 Drop_options = ["K Means Clustering"]
