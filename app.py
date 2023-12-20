@@ -27,7 +27,8 @@ st.text(f"UrbanPop value: {UrbanPop}")
 Rape = st.slider("Rape", min_value=7.3, max_value=46.0,step=0.1)
 st.text(f"Rape value: {Rape}")
 
-input={'murder':Murder,
+input={'index':Index,
+       'murder':Murder,
        'assault':Assault,
        'urbanpop':UrbanPop,
        'rape':Rape
