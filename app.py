@@ -35,5 +35,5 @@ input={'murder':Murder,
 input_X=pd.DataFrame(input, index=['value'])
 st.text("Input value of features:")
 input_X.T
-ypred=model.predict(X)
-st.text(f"ClusterID of the country {Y.index[Index]} is: {ypred[Index]}")
+ypred=model.predict(input_X)
+st.text(f"ClusterID of the country {Y.index[Index]} is: {ypred}")
