@@ -16,8 +16,8 @@ st.sidebar.header("Select the ML model you want to use")
 Drop_options = ["K Means Clustering"]
 Model_choice = st.sidebar.selectbox("Drop_options", options=Drop_options)
 
-Index = st.slider("Country Name", min_value=0, max_value=49, step=1)
-st.text(f"Country Name: {Y.index[Index]}")
+#Index = st.slider("Country Name", min_value=0, max_value=49, step=1)
+#st.text(f"Country Name: {Y.index[Index]}")
 Murder = st.slider("Murder", min_value=0.8, max_value=17.4, step=0.1)
 st.text(f"Muder value: {Murder}")
 Assault = st.slider("Assault", min_value=45, max_value=337, step=1)
