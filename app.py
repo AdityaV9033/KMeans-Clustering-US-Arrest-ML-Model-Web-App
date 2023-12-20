@@ -28,10 +28,10 @@ Rape = st.slider("Rape", min_value=7.3, max_value=46.0,step=0.1)
 st.text(f"Rape value: {Rape}")
 
 input={'index':Index,
-       'murder':Murder,
-       'assault':Assault,
-       'urbanpop':UrbanPop,
-       'rape':Rape
+       'Murder':Murder,
+       'Assault':Assault,
+       'UrbanPop':UrbanPop,
+       'Rape':Rape
        }
 input_X=pd.DataFrame(input, index=['value'])
 st.text("Input value of features:")
@@ -39,4 +39,4 @@ input_X.T
 Z=input_X.iloc[:,1:]
 Z
 ypred=model.predict(Z)
-st.text(f"ClusterID of the country is: {ypred}")
+st.text(f"ClusterID of the country {Y.index[Index]} is: {ypred}")
